@@ -1,0 +1,177 @@
+﻿using Authok.AuthenticationApi.Models;
+using Authok.ManagementApi.Models;
+using Authok.Tests.Shared;
+using FluentAssertions;
+using System;
+using System.Threading.Tasks;
+using Authok.AuthenticationApi.IntegrationTests.Testing;
+using Authok.IntegrationTests.Shared.CleanUp;
+using Xunit;
+using System.Collections.Generic;
+
+namespace Authok.AuthenticationApi.IntegrationTests
+{
+    public class AuthenticationTestsFixture : TestBaseFixture
+    {
+        public AuthenticationApiClient TestAuthenticationApiClient;
+        public Connection TestConnection;
+        public User TestUser;
+        public User TestPlusUser;
+        public User TestUserInDefaultDirectory;
+        public string TestPassword = "4cX8awB3T%@Aw-R:=h@ae@k?";
+
+        public override async Task InitializeAsync()
+        {
+            await base.InitializeAsync();
+
+            var tenantSettings = await ApiClient.TenantSettings.GetAsync();
+
+            if (string.IsNullOrEmpty(tenantSettings.DefaultDirectory))
+            {
+                throw new Exception("Tests require a tenant with a Default Directory selected.\r\n" +
+                    "Enable OAuth 2.0 API Authorization under Account Settings | General and " +
+                    "select a Default Directory under Account Settings | General");
+            }
+
+            // We will need a connection to add the users to...
+            TestConnection = await ApiClient.Connections.CreateAsync(new ConnectionCreateRequest
+            {
+                Name = $"{TestingConstants.ConnectionPrefix}-{TestBaseUtils.MakeRandomName()}",
+                Strategy = "authok",
+                EnabledClients = new[] { TestBaseUtils.GetVariable("AUTHOK_CLIENT_ID"), TestBaseUtils.GetVariable("AUTHOK_MANAGEMENT_API_CLIENT_ID") }
+            });
+
+            // And add a dummy user to test against
+            TestUser = await ApiClient.Users.CreateAsync(new UserCreateRequest
+            {
+                Connection = TestConnection.Name,
+                Email = $"{Guid.NewGuid():N}{TestingConstants.UserEmailDomain}",
+                EmailVerified = true,
+                Password = TestPassword
+            });
+
+            // Add a user with a + in the username
+            TestPlusUser = await ApiClient.Users.CreateAsync(new UserCreateRequest
+            {
+                Connection = TestConnection.Name,
+                Email = $"{Guid.NewGuid():N}+1{TestingConstants.UserEmailDomain}",
+                EmailVerified = true,
+                Password = TestPassword
+            });
+
+            // Add a user with a + in the username
+            TestUserInDefaultDirectory = await ApiClient.Users.CreateAsync(new UserCreateRequest
+            {
+                Connection = tenantSettings.DefaultDirectory,
+                Email = $"{Guid.NewGuid():N}+1{TestingConstants.UserEmailDomain}",
+                EmailVerified = true,
+                Password = TestPassword
+            });
+
+            TestAuthenticationApiClient = new TestAuthenticationApiClient(TestBaseUtils.GetVariable("AUTHOK_AUTHENTICATION_API_URL"));
+        }
+        public override async Task DisposeAsync()
+        {
+            await ManagementTestBaseUtils.CleanupAndDisposeAsync(ApiClient, new List<CleanUpType> { CleanUpType.Users, CleanUpType.Connections });
+        }
+    }
+
+    public class AuthenticationTests : IClassFixture<AuthenticationTestsFixture>
+    {
+        AuthenticationTestsFixture fixture;
+
+        public AuthenticationTests(AuthenticationTestsFixture fixture)
+        {
+            this.fixture = fixture;
+        }
+
+
+        [Fact]
+        public async Task Can_authenticate_against_Authok()
+        {
+            // Act
+            var authenticationResponse = await fixture.TestAuthenticationApiClient.GetTokenAsync(new ResourceOwnerTokenRequest
+            {
+                ClientId = TestBaseUtils.GetVariable("AUTHOK_CLIENT_ID"),
+                ClientSecret = TestBaseUtils.GetVariable("AUTHOK_CLIENT_SECRET"),
+                Realm = fixture.TestConnection.Name,
+                Scope = "openid",
+                Username = fixture.TestUser.Email,
+                Password = fixture.TestPassword
+
+            });
+
+            // Assert
+            authenticationResponse.Should().NotBeNull();
+            authenticationResponse.TokenType.Should().NotBeNull();
+            authenticationResponse.AccessToken.Should().NotBeNull();
+            authenticationResponse.IdToken.Should().NotBeNull();
+            authenticationResponse.RefreshToken.Should().BeNull(); // No refresh token if offline access was not requested
+        }
+
+        [Fact]
+        public async Task Can_authenticate_to_default_directory()
+        {
+            // Act
+            var authenticationResponse = await fixture.TestAuthenticationApiClient.GetTokenAsync(new ResourceOwnerTokenRequest
+            {
+                ClientId = TestBaseUtils.GetVariable("AUTHOK_CLIENT_ID"),
+                ClientSecret = TestBaseUtils.GetVariable("AUTHOK_CLIENT_SECRET"),
+                Scope = "openid",
+                Username = fixture.TestUserInDefaultDirectory.Email,
+                Password = fixture.TestPassword
+
+            });
+
+            // Assert
+            authenticationResponse.Should().NotBeNull();
+            authenticationResponse.TokenType.Should().NotBeNull();
+            authenticationResponse.AccessToken.Should().NotBeNull();
+            authenticationResponse.IdToken.Should().NotBeNull();
+            authenticationResponse.RefreshToken.Should().BeNull(); // No refresh token if offline access was not requested
+        }
+
+        [Fact(Skip = "Need to look into offline_access")]
+        public async Task Can_request_offline_access()
+        {
+            // Act
+            var authenticationResponse = await fixture.TestAuthenticationApiClient.GetTokenAsync(new ResourceOwnerTokenRequest
+            {
+                ClientId = TestBaseUtils.GetVariable("AUTHOK_CLIENT_ID"),
+                ClientSecret = TestBaseUtils.GetVariable("AUTHOK_CLIENT_SECRET"),
+                Realm = fixture.TestConnection.Name,
+                Scope = "openid offline_access",
+                Username = fixture.TestUser.Email,
+                Password = fixture.TestPassword
+            });
+
+            // Assert
+            authenticationResponse.Should().NotBeNull();
+            authenticationResponse.TokenType.Should().NotBeNull();
+            authenticationResponse.AccessToken.Should().NotBeNull();
+            authenticationResponse.IdToken.Should().NotBeNull();
+            authenticationResponse.RefreshToken.Should().NotBeNull(); // Requested offline access, so we should get a refresh token
+        }
+
+        [Fact]
+        public async Task Can_authenticate_user_with_plus_in_username()
+        {
+            // Act
+            var authenticationResponse = await fixture.TestAuthenticationApiClient.GetTokenAsync(new ResourceOwnerTokenRequest
+            {
+                ClientId = TestBaseUtils.GetVariable("AUTHOK_CLIENT_ID"),
+                ClientSecret = TestBaseUtils.GetVariable("AUTHOK_CLIENT_SECRET"),
+                Realm = fixture.TestConnection.Name,
+                Scope = "openid",
+                Username = fixture.TestPlusUser.Email,
+                Password = fixture.TestPassword
+            });
+
+            // Assert
+            authenticationResponse.Should().NotBeNull();
+            authenticationResponse.TokenType.Should().NotBeNull();
+            authenticationResponse.AccessToken.Should().NotBeNull();
+            authenticationResponse.IdToken.Should().NotBeNull();
+        }
+    }
+}

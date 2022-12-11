@@ -1,0 +1,38 @@
+<Project>
+  <PropertyGroup>
+    <Product>Authok.NET</Product>
+    <Description>Authok .NET SDK</Description>
+    <Copyright>Authok® Inc.</Copyright>
+    <NeutralLanguage>en-US</NeutralLanguage>
+    <Authors>Authok</Authors>
+    <PackageTags>authok;authentication;openid connect;oidc;oauth2</PackageTags>
+    <PackageIconUrl>https://secure.gravatar.com/avatar/805765c256ff8617fcad483b5476faf2</PackageIconUrl>
+    <PackageIcon>AuthokIcon.png</PackageIcon>
+    <PackageProjectUrl>https://github.com/authok/authok.net</PackageProjectUrl>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <RepositoryType>git</RepositoryType>
+    <RepositoryUrl>https://github.com/authok/authok.net</RepositoryUrl>
+    <PackageReleaseNotes>
+      https://github.com/authok/authok.net/blob/master/CHANGELOG.md
+    </PackageReleaseNotes>
+    <CLSCompliant>true</CLSCompliant>
+    <ComVisible>false</ComVisible>
+  </PropertyGroup>
+  <PropertyGroup>
+    <LangVersion>7.1</LangVersion>
+    <Version>7.17.4</Version>
+    <Suffix/>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyVersion>$(Version)</AssemblyVersion>
+    <AssemblyFileVersion>$(Version)</AssemblyFileVersion>
+    <InformationalVersion>$(Version)</InformationalVersion>
+    <PackageVersion>$(Version)</PackageVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="../../build/AuthokIcon.png" Pack="true" Visible="false" PackagePath=""/>
+  </ItemGroup>
+</Project>

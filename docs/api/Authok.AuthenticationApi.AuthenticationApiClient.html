@@ -1,0 +1,1069 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class AuthenticationApiClient
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class AuthenticationApiClient
+   ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../images/logo.png">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../images/logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Authok.AuthenticationApi.AuthenticationApiClient">
+  
+  
+  <h1 id="Authok_AuthenticationApi_AuthenticationApiClient" data-uid="Authok.AuthenticationApi.AuthenticationApiClient" class="text-break">Class AuthenticationApiClient
+  </h1>
+  <div class="markdown level0 summary"><p>Client for the Authok Authentication API.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">AuthenticationApiClient</span></div>
+  </div>
+  <div class="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="Authok.AuthenticationApi.IAuthenticationApiClient.html">IAuthenticationApiClient</a></div>
+    <div><span class="xref">IDisposable</span></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Authok.AuthenticationApi.html">Authok.AuthenticationApi</a></h6>
+  <h6><strong>Assembly</strong>: Authok.AuthenticationApi.dll</h6>
+  <h5 id="Authok_AuthenticationApi_AuthenticationApiClient_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class AuthenticationApiClient : object, IAuthenticationApiClient</code></pre>
+  </div>
+  <h5 id="Authok_AuthenticationApi_AuthenticationApiClient_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>Full documentation on the Authok Authentication API is available at <a href="https://authok.cn/docs/api/authentication">https://authok.cn/docs/api/authentication</a></p>
+</div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <a id="Authok_AuthenticationApi_AuthenticationApiClient__ctor_" data-uid="Authok.AuthenticationApi.AuthenticationApiClient.#ctor*"></a>
+  <h4 id="Authok_AuthenticationApi_AuthenticationApiClient__ctor_System_String_Authok_AuthenticationApi_IAuthenticationConnection_" data-uid="Authok.AuthenticationApi.AuthenticationApiClient.#ctor(System.String,Authok.AuthenticationApi.IAuthenticationConnection)">AuthenticationApiClient(String, IAuthenticationConnection)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Authok.AuthenticationApi.AuthenticationApiClient.html">AuthenticationApiClient</a> class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AuthenticationApiClient(string domain, IAuthenticationConnection connection = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">domain</span></td>
+        <td><p>Your Authok domain name, e.g. tenant.authok.cn.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Authok.AuthenticationApi.IAuthenticationConnection.html">IAuthenticationConnection</a></td>
+        <td><span class="parametername">connection</span></td>
+        <td><p>Optional <a class="xref" href="Authok.AuthenticationApi.IAuthenticationConnection.html">IAuthenticationConnection</a> used to influence connection behavior.
+Defaults to a freshly created <a class="xref" href="Authok.AuthenticationApi.HttpClientAuthenticationConnection.html">HttpClientAuthenticationConnection</a> that uses a single <see cref="!:HttpClient"></see>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Authok_AuthenticationApi_AuthenticationApiClient__ctor_System_String_Authok_AuthenticationApi_IAuthenticationConnection__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>To use a custom <see cref="!:HttpClient"></see> or <see cref="!:HttpMessageHandler"></see> create a 
+<a class="xref" href="Authok.AuthenticationApi.HttpClientAuthenticationConnection.html">HttpClientAuthenticationConnection</a> passing that into the constructor. e.g.</p>
+<pre><code>var client = new AuthenticationApiClient(domain, new HttpClientAuthenticationConnection(myHttpClient));</code></pre> or
+<pre><code>var client = new AuthenticationApiClient(domain, new HttpClientAuthenticationConnection(myHttpMessageHandler));</code></pre> or
+</div>
+  <a id="Authok_AuthenticationApi_AuthenticationApiClient__ctor_" data-uid="Authok.AuthenticationApi.AuthenticationApiClient.#ctor*"></a>
+  <h4 id="Authok_AuthenticationApi_AuthenticationApiClient__ctor_Uri_Authok_AuthenticationApi_IAuthenticationConnection_" data-uid="Authok.AuthenticationApi.AuthenticationApiClient.#ctor(Uri,Authok.AuthenticationApi.IAuthenticationConnection)">AuthenticationApiClient(Uri, IAuthenticationConnection)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Authok.AuthenticationApi.AuthenticationApiClient.html">AuthenticationApiClient</a> class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AuthenticationApiClient(Uri baseUri, IAuthenticationConnection connection = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Uri</span></td>
+        <td><span class="parametername">baseUri</span></td>
+        <td><p>Your Authok domain URI, e.g. <a href="https://tenant.authok.cn">https://tenant.authok.cn</a></p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Authok.AuthenticationApi.IAuthenticationConnection.html">IAuthenticationConnection</a></td>
+        <td><span class="parametername">connection</span></td>
+        <td><p>Optional <a class="xref" href="Authok.AuthenticationApi.IAuthenticationConnection.html">IAuthenticationConnection</a> used to influence connection behavior.
+Defaults to a freshly created <a class="xref" href="Authok.AuthenticationApi.HttpClientAuthenticationConnection.html">HttpClientAuthenticationConnection</a> that uses a single <see cref="!:HttpClient"></see>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Authok_AuthenticationApi_AuthenticationApiClient__ctor_Uri_Authok_AuthenticationApi_IAuthenticationConnection__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>To use a custom <see cref="!:HttpClient"></see> or <see cref="!:HttpMessageHandler"></see> create a 
+<a class="xref" href="Authok.AuthenticationApi.HttpClientAuthenticationConnection.html">HttpClientAuthenticationConnection</a> passing that into the constructor. e.g.</p>
+<pre><code>var client = new AuthenticationApiClient(baseUri, new HttpClientAuthenticationConnection(myHttpClient));</code></pre> or
+<pre><code>var client = new AuthenticationApiClient(baseUri, new HttpClientAuthenticationConnection(myHttpMessageHandler));</code></pre> or
+</div>
+  <h3 id="fields">Fields
+  </h3>
+  <h4 id="Authok_AuthenticationApi_AuthenticationApiClient_connection" data-uid="Authok.AuthenticationApi.AuthenticationApiClient.connection">connection</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected readonly IAuthenticationConnection connection</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Authok.AuthenticationApi.IAuthenticationConnection.html">IAuthenticationConnection</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <a id="Authok_AuthenticationApi_AuthenticationApiClient_BaseUri_" data-uid="Authok.AuthenticationApi.AuthenticationApiClient.BaseUri*"></a>
+  <h4 id="Authok_AuthenticationApi_AuthenticationApiClient_BaseUri" data-uid="Authok.AuthenticationApi.AuthenticationApiClient.BaseUri">BaseUri</h4>
+  <div class="markdown level1 summary"><p>Base URI that will be used for all the requests.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Uri BaseUri { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Uri</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <a id="Authok_AuthenticationApi_AuthenticationApiClient_ChangePasswordAsync_" data-uid="Authok.AuthenticationApi.AuthenticationApiClient.ChangePasswordAsync*"></a>
+  <h4 id="Authok_AuthenticationApi_AuthenticationApiClient_ChangePasswordAsync_Authok_AuthenticationApi_Models_ChangePasswordRequest_CancellationToken_" data-uid="Authok.AuthenticationApi.AuthenticationApiClient.ChangePasswordAsync(Authok.AuthenticationApi.Models.ChangePasswordRequest,CancellationToken)">ChangePasswordAsync(ChangePasswordRequest, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Requests a password change email for a given email address and connection.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;string&gt; ChangePasswordAsync(ChangePasswordRequest request, CancellationToken cancellationToken = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Authok.AuthenticationApi.Models.ChangePasswordRequest.html">ChangePasswordRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p><a class="xref" href="Authok.AuthenticationApi.Models.ChangePasswordRequest.html">ChangePasswordRequest</a> specifying the user, connection and optional client details.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>The cancellation token to cancel operation.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><p><see cref="!:Task"></see> representing the async operation containing either the JSON error response or the plain text success message response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Authok_AuthenticationApi_AuthenticationApiClient_Dispose_" data-uid="Authok.AuthenticationApi.AuthenticationApiClient.Dispose*"></a>
+  <h4 id="Authok_AuthenticationApi_AuthenticationApiClient_Dispose" data-uid="Authok.AuthenticationApi.AuthenticationApiClient.Dispose">Dispose()</h4>
+  <div class="markdown level1 summary"><p>Disposes of any owned disposable resources such as a <a class="xref" href="Authok.AuthenticationApi.IAuthenticationConnection.html">IAuthenticationConnection</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Dispose()</code></pre>
+  </div>
+  <a id="Authok_AuthenticationApi_AuthenticationApiClient_Dispose_" data-uid="Authok.AuthenticationApi.AuthenticationApiClient.Dispose*"></a>
+  <h4 id="Authok_AuthenticationApi_AuthenticationApiClient_Dispose_System_Boolean_" data-uid="Authok.AuthenticationApi.AuthenticationApiClient.Dispose(System.Boolean)">Dispose(Boolean)</h4>
+  <div class="markdown level1 summary"><p>Disposes of any owned disposable resources such as a <a class="xref" href="Authok.AuthenticationApi.IAuthenticationConnection.html">IAuthenticationConnection</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void Dispose(bool disposing)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">disposing</span></td>
+        <td><p>Whether we are actually disposing (<span class="xref">true</span>) or not (<span class="xref">false</span>).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Authok_AuthenticationApi_AuthenticationApiClient_GetImpersonationUrlAsync_" data-uid="Authok.AuthenticationApi.AuthenticationApiClient.GetImpersonationUrlAsync*"></a>
+  <h4 id="Authok_AuthenticationApi_AuthenticationApiClient_GetImpersonationUrlAsync_Authok_AuthenticationApi_Models_ImpersonationRequest_CancellationToken_" data-uid="Authok.AuthenticationApi.AuthenticationApiClient.GetImpersonationUrlAsync(Authok.AuthenticationApi.Models.ImpersonationRequest,CancellationToken)">GetImpersonationUrlAsync(ImpersonationRequest, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Obtains a one-time link that can be used to log in as a specific user.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public async Task&lt;Uri&gt; GetImpersonationUrlAsync(ImpersonationRequest request, CancellationToken cancellationToken = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Authok.AuthenticationApi.Models.ImpersonationRequest.html">ImpersonationRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The <a class="xref" href="Authok.AuthenticationApi.Models.ImpersonationRequest.html">ImpersonationRequest</a> containing the details of the user to impersonate.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>The cancellation token to cancel operation.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span>&lt;<span class="xref">Uri</span>&gt;</td>
+        <td><p><see cref="!:Task"></see> which can be used to sign in as the specified user.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Authok_AuthenticationApi_AuthenticationApiClient_GetImpersonationUrlAsync_Authok_AuthenticationApi_Models_ImpersonationRequest_CancellationToken__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This feature has been deprecated and will be removed from Authok and this library in a future release.</p>
+</div>
+  <a id="Authok_AuthenticationApi_AuthenticationApiClient_GetTokenAsync_" data-uid="Authok.AuthenticationApi.AuthenticationApiClient.GetTokenAsync*"></a>
+  <h4 id="Authok_AuthenticationApi_AuthenticationApiClient_GetTokenAsync_Authok_AuthenticationApi_Models_AuthorizationCodePkceTokenRequest_CancellationToken_" data-uid="Authok.AuthenticationApi.AuthenticationApiClient.GetTokenAsync(Authok.AuthenticationApi.Models.AuthorizationCodePkceTokenRequest,CancellationToken)">GetTokenAsync(AuthorizationCodePkceTokenRequest, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Exchanges an Authorization Code using PKCE for an Access Token.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public async Task&lt;AccessTokenResponse&gt; GetTokenAsync(AuthorizationCodePkceTokenRequest request, CancellationToken cancellationToken = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Authok.AuthenticationApi.Models.AuthorizationCodePkceTokenRequest.html">AuthorizationCodePkceTokenRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p><a class="xref" href="Authok.AuthenticationApi.Models.AuthorizationCodePkceTokenRequest.html">AuthorizationCodePkceTokenRequest</a> containing Authorization Code and PKCE details.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>The cancellation token to cancel operation.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span>&lt;<a class="xref" href="Authok.AuthenticationApi.Models.AccessTokenResponse.html">AccessTokenResponse</a>&gt;</td>
+        <td><p><see cref="!:Task"></see> representing the async operation containing 
+    a <a class="xref" href="Authok.AuthenticationApi.Models.AccessTokenResponse.html">AccessTokenResponse</a> with the requested tokens.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Authok_AuthenticationApi_AuthenticationApiClient_GetTokenAsync_" data-uid="Authok.AuthenticationApi.AuthenticationApiClient.GetTokenAsync*"></a>
+  <h4 id="Authok_AuthenticationApi_AuthenticationApiClient_GetTokenAsync_Authok_AuthenticationApi_Models_AuthorizationCodeTokenRequest_CancellationToken_" data-uid="Authok.AuthenticationApi.AuthenticationApiClient.GetTokenAsync(Authok.AuthenticationApi.Models.AuthorizationCodeTokenRequest,CancellationToken)">GetTokenAsync(AuthorizationCodeTokenRequest, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Exchanges an Authorization Code for an Access Token.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public async Task&lt;AccessTokenResponse&gt; GetTokenAsync(AuthorizationCodeTokenRequest request, CancellationToken cancellationToken = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Authok.AuthenticationApi.Models.AuthorizationCodeTokenRequest.html">AuthorizationCodeTokenRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p><a class="xref" href="Authok.AuthenticationApi.Models.AuthorizationCodeTokenRequest.html">AuthorizationCodeTokenRequest</a> containing Authorization Code details.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>The cancellation token to cancel operation.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span>&lt;<a class="xref" href="Authok.AuthenticationApi.Models.AccessTokenResponse.html">AccessTokenResponse</a>&gt;</td>
+        <td><p><see cref="!:Task"></see> representing the async operation containing 
+    a <a class="xref" href="Authok.AuthenticationApi.Models.AccessTokenResponse.html">AccessTokenResponse</a> with the requested tokens.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Authok_AuthenticationApi_AuthenticationApiClient_GetTokenAsync_" data-uid="Authok.AuthenticationApi.AuthenticationApiClient.GetTokenAsync*"></a>
+  <h4 id="Authok_AuthenticationApi_AuthenticationApiClient_GetTokenAsync_Authok_AuthenticationApi_Models_ClientCredentialsTokenRequest_CancellationToken_" data-uid="Authok.AuthenticationApi.AuthenticationApiClient.GetTokenAsync(Authok.AuthenticationApi.Models.ClientCredentialsTokenRequest,CancellationToken)">GetTokenAsync(ClientCredentialsTokenRequest, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Requests an Access Token using the Client Credentials Grant flow.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;AccessTokenResponse&gt; GetTokenAsync(ClientCredentialsTokenRequest request, CancellationToken cancellationToken = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Authok.AuthenticationApi.Models.ClientCredentialsTokenRequest.html">ClientCredentialsTokenRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p><a class="xref" href="Authok.AuthenticationApi.Models.ClientCredentialsTokenRequest.html">ClientCredentialsTokenRequest</a> containing
+    client and audience details of the request.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>The cancellation token to cancel operation.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span>&lt;<a class="xref" href="Authok.AuthenticationApi.Models.AccessTokenResponse.html">AccessTokenResponse</a>&gt;</td>
+        <td><p><see cref="!:Task"></see> representing the async operation containing 
+    a <a class="xref" href="Authok.AuthenticationApi.Models.AccessTokenResponse.html">AccessTokenResponse</a> with the requested tokens.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Authok_AuthenticationApi_AuthenticationApiClient_GetTokenAsync_" data-uid="Authok.AuthenticationApi.AuthenticationApiClient.GetTokenAsync*"></a>
+  <h4 id="Authok_AuthenticationApi_AuthenticationApiClient_GetTokenAsync_Authok_AuthenticationApi_Models_DeviceCodeTokenRequest_CancellationToken_" data-uid="Authok.AuthenticationApi.AuthenticationApiClient.GetTokenAsync(Authok.AuthenticationApi.Models.DeviceCodeTokenRequest,CancellationToken)">GetTokenAsync(DeviceCodeTokenRequest, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Requests an Access Token using the Device Authorization flow</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public async Task&lt;AccessTokenResponse&gt; GetTokenAsync(DeviceCodeTokenRequest request, CancellationToken cancellationToken = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Authok.AuthenticationApi.Models.DeviceCodeTokenRequest.html">DeviceCodeTokenRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p><a class="xref" href="Authok.AuthenticationApi.Models.DeviceCodeTokenRequest.html">DeviceCodeTokenRequest</a> containing request details to exchange a device code.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>The cancellation token to cancel operation.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span>&lt;<a class="xref" href="Authok.AuthenticationApi.Models.AccessTokenResponse.html">AccessTokenResponse</a>&gt;</td>
+        <td><p><see cref="!:Task"></see> representing the async operation containing 
+    a <a class="xref" href="Authok.AuthenticationApi.Models.AccessTokenResponse.html">AccessTokenResponse</a> with the requested tokens.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Authok_AuthenticationApi_AuthenticationApiClient_GetTokenAsync_Authok_AuthenticationApi_Models_DeviceCodeTokenRequest_CancellationToken__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This must be polled while the user is completing their part of the flow at an interval no more frequent than that returned by <a class="xref" href="Authok.AuthenticationApi.IAuthenticationApiClient.html#Authok_AuthenticationApi_IAuthenticationApiClient_StartDeviceFlowAsync_Authok_AuthenticationApi_Models_DeviceCodeRequest_CancellationToken_">StartDeviceFlowAsync(DeviceCodeRequest, CancellationToken)</a>.</p>
+</div>
+  <a id="Authok_AuthenticationApi_AuthenticationApiClient_GetTokenAsync_" data-uid="Authok.AuthenticationApi.AuthenticationApiClient.GetTokenAsync*"></a>
+  <h4 id="Authok_AuthenticationApi_AuthenticationApiClient_GetTokenAsync_Authok_AuthenticationApi_Models_PasswordlessEmailTokenRequest_CancellationToken_" data-uid="Authok.AuthenticationApi.AuthenticationApiClient.GetTokenAsync(Authok.AuthenticationApi.Models.PasswordlessEmailTokenRequest,CancellationToken)">GetTokenAsync(PasswordlessEmailTokenRequest, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Requests an Access Token using the Passwordless flow through email.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public async Task&lt;AccessTokenResponse&gt; GetTokenAsync(PasswordlessEmailTokenRequest request, CancellationToken cancellationToken = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Authok.AuthenticationApi.Models.PasswordlessEmailTokenRequest.html">PasswordlessEmailTokenRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p><a class="xref" href="Authok.AuthenticationApi.Models.PasswordlessEmailTokenRequest.html">PasswordlessEmailTokenRequest</a> containing request details to exchange a one time password received through email.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>The cancellation token to cancel operation.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span>&lt;<a class="xref" href="Authok.AuthenticationApi.Models.AccessTokenResponse.html">AccessTokenResponse</a>&gt;</td>
+        <td><p><see cref="!:Task"></see> representing the async operation containing 
+    a <a class="xref" href="Authok.AuthenticationApi.Models.AccessTokenResponse.html">AccessTokenResponse</a> with the requested tokens.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Authok_AuthenticationApi_AuthenticationApiClient_GetTokenAsync_" data-uid="Authok.AuthenticationApi.AuthenticationApiClient.GetTokenAsync*"></a>
+  <h4 id="Authok_AuthenticationApi_AuthenticationApiClient_GetTokenAsync_Authok_AuthenticationApi_Models_PasswordlessSmsTokenRequest_CancellationToken_" data-uid="Authok.AuthenticationApi.AuthenticationApiClient.GetTokenAsync(Authok.AuthenticationApi.Models.PasswordlessSmsTokenRequest,CancellationToken)">GetTokenAsync(PasswordlessSmsTokenRequest, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Requests an Access Token using the Passwordless flow through SMS.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public async Task&lt;AccessTokenResponse&gt; GetTokenAsync(PasswordlessSmsTokenRequest request, CancellationToken cancellationToken = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Authok.AuthenticationApi.Models.PasswordlessSmsTokenRequest.html">PasswordlessSmsTokenRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p><a class="xref" href="Authok.AuthenticationApi.Models.PasswordlessSmsTokenRequest.html">PasswordlessSmsTokenRequest</a> containing request details to exchange a one time password received through SMS.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>The cancellation token to cancel operation.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span>&lt;<a class="xref" href="Authok.AuthenticationApi.Models.AccessTokenResponse.html">AccessTokenResponse</a>&gt;</td>
+        <td><p><see cref="!:Task"></see> representing the async operation containing 
+    a <a class="xref" href="Authok.AuthenticationApi.Models.AccessTokenResponse.html">AccessTokenResponse</a> with the requested tokens.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Authok_AuthenticationApi_AuthenticationApiClient_GetTokenAsync_" data-uid="Authok.AuthenticationApi.AuthenticationApiClient.GetTokenAsync*"></a>
+  <h4 id="Authok_AuthenticationApi_AuthenticationApiClient_GetTokenAsync_Authok_AuthenticationApi_Models_RefreshTokenRequest_CancellationToken_" data-uid="Authok.AuthenticationApi.AuthenticationApiClient.GetTokenAsync(Authok.AuthenticationApi.Models.RefreshTokenRequest,CancellationToken)">GetTokenAsync(RefreshTokenRequest, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Refreshes all tokens by way of the the Refresh Token obtained during authorization.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public async Task&lt;AccessTokenResponse&gt; GetTokenAsync(RefreshTokenRequest request, CancellationToken cancellationToken = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Authok.AuthenticationApi.Models.RefreshTokenRequest.html">RefreshTokenRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p><a class="xref" href="Authok.AuthenticationApi.Models.RefreshTokenRequest.html">RefreshTokenRequest</a> containing Refresh Token and associated parameters.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>The cancellation token to cancel operation.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span>&lt;<a class="xref" href="Authok.AuthenticationApi.Models.AccessTokenResponse.html">AccessTokenResponse</a>&gt;</td>
+        <td><p><see cref="!:Task"></see> representing the async operation containing 
+    a <a class="xref" href="Authok.AuthenticationApi.Models.AccessTokenResponse.html">AccessTokenResponse</a> with the requested tokens.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Authok_AuthenticationApi_AuthenticationApiClient_GetTokenAsync_" data-uid="Authok.AuthenticationApi.AuthenticationApiClient.GetTokenAsync*"></a>
+  <h4 id="Authok_AuthenticationApi_AuthenticationApiClient_GetTokenAsync_Authok_AuthenticationApi_Models_ResourceOwnerTokenRequest_CancellationToken_" data-uid="Authok.AuthenticationApi.AuthenticationApiClient.GetTokenAsync(Authok.AuthenticationApi.Models.ResourceOwnerTokenRequest,CancellationToken)">GetTokenAsync(ResourceOwnerTokenRequest, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Performs authentication by providing user-supplied information in a <a class="xref" href="Authok.AuthenticationApi.Models.ResourceOwnerTokenRequest.html">ResourceOwnerTokenRequest</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public async Task&lt;AccessTokenResponse&gt; GetTokenAsync(ResourceOwnerTokenRequest request, CancellationToken cancellationToken = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Authok.AuthenticationApi.Models.ResourceOwnerTokenRequest.html">ResourceOwnerTokenRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p><a class="xref" href="Authok.AuthenticationApi.Models.ResourceOwnerTokenRequest.html">ResourceOwnerTokenRequest</a> containing information regarding the username, password etc.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>The cancellation token to cancel operation.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span>&lt;<a class="xref" href="Authok.AuthenticationApi.Models.AccessTokenResponse.html">AccessTokenResponse</a>&gt;</td>
+        <td><p><see cref="!:Task"></see> representing the async operation containing 
+    a <a class="xref" href="Authok.AuthenticationApi.Models.AccessTokenResponse.html">AccessTokenResponse</a> with the requested tokens.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Authok_AuthenticationApi_AuthenticationApiClient_GetTokenAsync_Authok_AuthenticationApi_Models_ResourceOwnerTokenRequest_CancellationToken__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>The grant_type parameter required by the /oauth/token endpoint will automatically be inferred from the <code data-dev-comment-type="paramref" class="paramref">request</code> parameter. If no Realm was specified,
+then the grant_type will be set to &quot;password&quot;. If a Realm was specified, then the grant_type will be set to &quot;<a href="http://authok.cn/oauth/grant-type/password-realm&amp;quot">http://authok.cn/oauth/grant-type/password-realm&quot</a>;</p>
+</div>
+  <a id="Authok_AuthenticationApi_AuthenticationApiClient_GetUserInfoAsync_" data-uid="Authok.AuthenticationApi.AuthenticationApiClient.GetUserInfoAsync*"></a>
+  <h4 id="Authok_AuthenticationApi_AuthenticationApiClient_GetUserInfoAsync_System_String_CancellationToken_" data-uid="Authok.AuthenticationApi.AuthenticationApiClient.GetUserInfoAsync(System.String,CancellationToken)">GetUserInfoAsync(String, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Returns user information based on the access token that was obtained during login.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;UserInfo&gt; GetUserInfoAsync(string accessToken, CancellationToken cancellationToken = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">accessToken</span></td>
+        <td><p>Access token used to obtain the user information.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>The cancellation token to cancel operation.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span>&lt;<a class="xref" href="Authok.AuthenticationApi.Models.UserInfo.html">UserInfo</a>&gt;</td>
+        <td><p><see cref="!:Task"></see> representing the async operation containing the
+<a class="xref" href="Authok.AuthenticationApi.Models.UserInfo.html">UserInfo</a> requested..</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Authok_AuthenticationApi_AuthenticationApiClient_GetUserInfoAsync_System_String_CancellationToken__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Information included in the response depends on the scopes initially granted.</p>
+</div>
+  <a id="Authok_AuthenticationApi_AuthenticationApiClient_SignupUserAsync_" data-uid="Authok.AuthenticationApi.AuthenticationApiClient.SignupUserAsync*"></a>
+  <h4 id="Authok_AuthenticationApi_AuthenticationApiClient_SignupUserAsync_Authok_AuthenticationApi_Models_SignupUserRequest_CancellationToken_" data-uid="Authok.AuthenticationApi.AuthenticationApiClient.SignupUserAsync(Authok.AuthenticationApi.Models.SignupUserRequest,CancellationToken)">SignupUserAsync(SignupUserRequest, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Creates a new user given the user details specified.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;SignupUserResponse&gt; SignupUserAsync(SignupUserRequest request, CancellationToken cancellationToken = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Authok.AuthenticationApi.Models.SignupUserRequest.html">SignupUserRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p><a class="xref" href="Authok.AuthenticationApi.Models.SignupUserRequest.html">SignupUserRequest</a> containing information of the user to sign up.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>The cancellation token to cancel operation.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span>&lt;<a class="xref" href="Authok.AuthenticationApi.Models.SignupUserResponse.html">SignupUserResponse</a>&gt;</td>
+        <td><p><see cref="!:Task"></see> representing the async operation containing 
+    a <a class="xref" href="Authok.AuthenticationApi.Models.SignupUserResponse.html">SignupUserResponse</a> with the information of the signed up user.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Authok_AuthenticationApi_AuthenticationApiClient_StartDeviceFlowAsync_" data-uid="Authok.AuthenticationApi.AuthenticationApiClient.StartDeviceFlowAsync*"></a>
+  <h4 id="Authok_AuthenticationApi_AuthenticationApiClient_StartDeviceFlowAsync_Authok_AuthenticationApi_Models_DeviceCodeRequest_CancellationToken_" data-uid="Authok.AuthenticationApi.AuthenticationApiClient.StartDeviceFlowAsync(Authok.AuthenticationApi.Models.DeviceCodeRequest,CancellationToken)">StartDeviceFlowAsync(DeviceCodeRequest, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Starts a new Device Authorization flow</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;DeviceCodeResponse&gt; StartDeviceFlowAsync(DeviceCodeRequest request, CancellationToken cancellationToken = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Authok.AuthenticationApi.Models.DeviceCodeRequest.html">DeviceCodeRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p><a class="xref" href="Authok.AuthenticationApi.Models.DeviceCodeRequest.html">DeviceCodeRequest</a> containing client, scope and audience</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>The cancellation token to cancel operation.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span>&lt;<a class="xref" href="Authok.AuthenticationApi.Models.DeviceCodeResponse.html">DeviceCodeResponse</a>&gt;</td>
+        <td><p><see cref="!:Task"></see> representing the async operation containing 
+    a <a class="xref" href="Authok.AuthenticationApi.Models.DeviceCodeResponse.html">DeviceCodeResponse</a> with the details of the request.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Authok_AuthenticationApi_AuthenticationApiClient_StartPasswordlessEmailFlowAsync_" data-uid="Authok.AuthenticationApi.AuthenticationApiClient.StartPasswordlessEmailFlowAsync*"></a>
+  <h4 id="Authok_AuthenticationApi_AuthenticationApiClient_StartPasswordlessEmailFlowAsync_Authok_AuthenticationApi_Models_PasswordlessEmailRequest_CancellationToken_" data-uid="Authok.AuthenticationApi.AuthenticationApiClient.StartPasswordlessEmailFlowAsync(Authok.AuthenticationApi.Models.PasswordlessEmailRequest,CancellationToken)">StartPasswordlessEmailFlowAsync(PasswordlessEmailRequest, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Starts a new Passwordless email flow.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;PasswordlessEmailResponse&gt; StartPasswordlessEmailFlowAsync(PasswordlessEmailRequest request, CancellationToken cancellationToken = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Authok.AuthenticationApi.Models.PasswordlessEmailRequest.html">PasswordlessEmailRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p><a class="xref" href="Authok.AuthenticationApi.Models.PasswordlessEmailRequest.html">PasswordlessEmailRequest</a> containing details about the Passwordless email flow to start.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>The cancellation token to cancel operation.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span>&lt;<a class="xref" href="Authok.AuthenticationApi.Models.PasswordlessEmailResponse.html">PasswordlessEmailResponse</a>&gt;</td>
+        <td><p><see cref="!:Task"></see> representing the async operation containing 
+    a <a class="xref" href="Authok.AuthenticationApi.Models.PasswordlessEmailResponse.html">PasswordlessEmailResponse</a> with the information of the signed up user.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Authok_AuthenticationApi_AuthenticationApiClient_StartPasswordlessSmsFlowAsync_" data-uid="Authok.AuthenticationApi.AuthenticationApiClient.StartPasswordlessSmsFlowAsync*"></a>
+  <h4 id="Authok_AuthenticationApi_AuthenticationApiClient_StartPasswordlessSmsFlowAsync_Authok_AuthenticationApi_Models_PasswordlessSmsRequest_CancellationToken_" data-uid="Authok.AuthenticationApi.AuthenticationApiClient.StartPasswordlessSmsFlowAsync(Authok.AuthenticationApi.Models.PasswordlessSmsRequest,CancellationToken)">StartPasswordlessSmsFlowAsync(PasswordlessSmsRequest, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Starts a new Passwordless SMS flow.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;PasswordlessSmsResponse&gt; StartPasswordlessSmsFlowAsync(PasswordlessSmsRequest request, CancellationToken cancellationToken = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Authok.AuthenticationApi.Models.PasswordlessSmsRequest.html">PasswordlessSmsRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p><a class="xref" href="Authok.AuthenticationApi.Models.PasswordlessSmsRequest.html">PasswordlessSmsRequest</a> containing details about the Passwordless SMS flow to start.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>The cancellation token to cancel operation.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span>&lt;<a class="xref" href="Authok.AuthenticationApi.Models.PasswordlessSmsResponse.html">PasswordlessSmsResponse</a>&gt;</td>
+        <td><p><see cref="!:Task"></see> representing the async operation containing 
+    a <a class="xref" href="Authok.AuthenticationApi.Models.PasswordlessSmsResponse.html">PasswordlessSmsResponse</a> with the details of the request.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="Authok.AuthenticationApi.IAuthenticationApiClient.html">IAuthenticationApiClient</a>
+  </div>
+  <div>
+      <span class="xref">IDisposable</span>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
